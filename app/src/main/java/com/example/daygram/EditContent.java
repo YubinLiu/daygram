@@ -3,6 +3,7 @@ package com.example.daygram;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -46,6 +47,8 @@ public class EditContent extends Activity {
 
     private int mMinutes;
 
+    private String mString;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +81,7 @@ public class EditContent extends Activity {
         }
 
         editContent = (EditText) findViewById(R.id.edit_content);
+
         clock = (Button) findViewById(R.id.clock);
         done = (Button) findViewById(R.id.done);
 
@@ -134,6 +138,19 @@ public class EditContent extends Activity {
         });
     }
 
+    /*
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        editContent.setText(mString);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mString = editContent.getText().toString();
+    }
+    */
     @Override
     protected void onDestroy() {
         super.onDestroy();

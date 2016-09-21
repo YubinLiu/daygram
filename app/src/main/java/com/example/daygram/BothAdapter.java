@@ -1,6 +1,10 @@
 package com.example.daygram;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -96,6 +100,9 @@ public class BothAdapter extends BaseAdapter {
             case TYPE_A:
                 ContentList a = (ContentList) obj;
                 if(a != null){
+                    if (a.getWeek().equals("SUN")) {
+                        holder1.week.setTextColor(android.graphics.Color.RED);
+                    }
                     holder1.week.setText(a.getWeek());
                     holder1.date.setText(a.getDate());
                     holder1.content.setText(a.getContent());
@@ -112,5 +119,4 @@ public class BothAdapter extends BaseAdapter {
         TextView date;
         TextView content;
     }
-
 }

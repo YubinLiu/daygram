@@ -33,9 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView list;
 
-    //private ArrayList<Object> mData = null;
-
-    private ArrayList<HashMap<String, Object>> listItem = null;
+    //private ArrayList<HashMap<String, Object>> listItem = null;
 
     private BothAdapter adapter = null;
 
@@ -56,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         list = (ListView) findViewById(R.id.list_view);
 
         Intent intent = getIntent();
-        int itemClicked = intent.getIntExtra("itemClicked", 0);
+        final int itemClicked = intent.getIntExtra("itemClicked", 0);
         int itemLength = intent.getIntExtra("itemLength", 0);
 
         Log.e("MainActivity content", "is " + intent.getStringExtra("content"));
@@ -67,24 +65,19 @@ public class MainActivity extends AppCompatActivity {
             }
             adapter = new BothAdapter(MainActivity.this, mData);
             list.setAdapter(adapter);
-        } else if (intent.getStringExtra("week") != null && intent.getStringExtra("date") != null) {
-            mData.removeAll(mData);
-            for (int i = 1; i <= day; i++) {
-                if (itemClicked == (i - 1)) {
-                    contentList.setWeek(intent.getStringExtra("week"));
-                    contentList.setDate(intent.getStringExtra("date"));
-                    contentList.setContent(intent.getStringExtra("content"));
-                    mData.add(contentList);
-                    continue;
-                }
-                mData.add(null);
-            }
+        }
+        else if (intent.getStringExtra("week") != null
+                && intent.getStringExtra("date") != null) {
+            contentList.setWeek(intent.getStringExtra("week"));
+            contentList.setDate(intent.getStringExtra("date"));
+            contentList.setContent(intent.getStringExtra("content"));
+
+            mData.set(itemClicked, contentList);
             adapter = new BothAdapter(MainActivity.this, mData);
             list.setAdapter(adapter);
         }
 
         list.setSelection(adapter.getCount()-1);
-        //list.setTranscriptMode(ListView.TRANSCRIPT_MODE_ALWAYS_SCROLL);
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
