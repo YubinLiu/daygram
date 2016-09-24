@@ -62,6 +62,8 @@ public class EditContent extends Activity {
 
         final int itemLength = intent.getIntExtra("itemLength", 0);
 
+        final String passContent = intent.getStringExtra("passContent");
+
         Log.e("position", "position: " + intent.getIntExtra("position", 0));
 
         time = (TextView) findViewById(R.id.time);
@@ -81,6 +83,7 @@ public class EditContent extends Activity {
         }
 
         editContent = (EditText) findViewById(R.id.edit_content);
+        editContent.setText(passContent);
 
         clock = (Button) findViewById(R.id.clock);
         done = (Button) findViewById(R.id.done);
@@ -136,46 +139,6 @@ public class EditContent extends Activity {
                 startActivity(intent);
             }
         });
-    }
-
-    /*
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        editContent.setText(mString);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        mString = editContent.getText().toString();
-    }
-    */
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        String editText = editContent.getText().toString();
-        save(editText);
-    }
-
-    public void save(String editText) {
-        FileOutputStream out = null;
-        BufferedWriter writer = null;
-        try {
-            out = openFileOutput("content", Context.MODE_PRIVATE);
-            writer = new BufferedWriter(new OutputStreamWriter(out));
-            writer.write(editText);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (writer != null) {
-                    writer.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     public static String getDate(int position){

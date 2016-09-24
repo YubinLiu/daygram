@@ -1,9 +1,16 @@
 package com.example.daygram;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
 /**
  * Created by yubin on 2016/9/15.
  */
-public class ContentList {
+public class ContentList implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private String week;
 
@@ -36,3 +43,5 @@ public class ContentList {
     }
 
 }
+
+
