@@ -442,8 +442,20 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("month", 9);
                 intent.putExtra("year", yearClick.getText().toString().substring(0,4));
                 intent.putExtra("position", position);
+
+                if (mData.get(position) != null) {
+                    Object[] obj = mData.toArray();
+                    for (int i = 0; i < mData.size(); i++) {
+                        if (i == position) {
+                            contentList = (ContentList) obj[i];
+                        }
+                    }
+                    intent.putExtra("passContent", contentList.getContent());
+                }
+
                 startActivity(intent);
             }
         });
+
     }
 }

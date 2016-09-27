@@ -63,6 +63,7 @@ public class MonthAndYearChange extends Activity {
         }
 
         editContent = (EditText) findViewById(R.id.edit_content_change);
+        editContent.setText(intent.getStringExtra("passContent"));
         editContent.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
