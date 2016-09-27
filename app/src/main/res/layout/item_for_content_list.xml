@@ -28,6 +28,7 @@
         android:id="@+id/content"
         android:layout_toRightOf="@id/week_and_day"
         android:paddingLeft="20dp"
+        android:paddingRight="10dp"
         android:paddingTop="10dp"
         android:textSize="15dp"
         android:layout_width="wrap_content"

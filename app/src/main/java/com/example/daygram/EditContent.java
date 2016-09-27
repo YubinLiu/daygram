@@ -48,8 +48,6 @@ public class EditContent extends Activity {
 
     private int mMinutes;
 
-    private String mString;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
