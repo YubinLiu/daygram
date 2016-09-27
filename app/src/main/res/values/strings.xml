@@ -1,6 +1,27 @@
 <resources>
     <string name="app_name">DayGram</string>
 
+    <string name="Jan">Jan</string>
+    <string name="Feb">Feb</string>
+    <string name="Mar">Mar</string>
+    <string name="Apr">Apr</string>
+    <string name="May">May</string>
+    <string name="Jun">Jun</string>
+    <string name="Jul">Jul</string>
+    <string name="Aug">Aug</string>
+    <string name="Sep">Sep</string>
+    <string name="Oct">Oct</string>
+    <string name="Nov">Nov</string>
+    <string name="Dec">Dec</string>
+
+    <string name="one">2011</string>
+    <string name="two">2012</string>
+    <string name="three">2013</string>
+    <string name="four">2014</string>
+    <string name="five">2015</string>
+    <string name="six">2016</string>
+
+
     <item name="tag_A" type="id"></item>
     <item name="tag_B" type="id"></item>
 </resources>

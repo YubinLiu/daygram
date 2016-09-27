@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/Jan"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/Jan"/>
+    <item
+        android:id="@+id/Feb"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/Feb"/>
+    <item
+        android:id="@+id/Mar"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/Mar"/>
+    <item
+        android:id="@+id/Apr"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/Apr"/>
+    <item
+        android:id="@+id/May"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/May"/>
+    <item
+        android:id="@+id/Jun"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/Jun"/>
+
+    <item
+        android:id="@+id/Jul"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/Jul"/>
+    <item
+        android:id="@+id/Aug"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/Aug"/>
+    <item
+        android:id="@+id/Sep"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/Sep"/>
+    <item
+        android:id="@+id/Oct"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/Oct"/>
+    <item
+        android:id="@+id/Nov"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/Nov"/>
+    <item
+        android:id="@+id/Dec"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/Dec"/>
+
+</menu>

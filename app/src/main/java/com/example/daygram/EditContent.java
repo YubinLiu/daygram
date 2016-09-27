@@ -16,6 +16,7 @@ import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -52,6 +53,11 @@ public class EditContent extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.edit_layout);
 
         Intent intent = getIntent();
@@ -181,5 +187,4 @@ public class EditContent extends Activity {
         Log.e("week", week);
         return week + " / " + month + " " + day + " / " + year;
     }
-
 }

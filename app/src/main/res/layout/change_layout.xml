@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/edit_background"
+        >
+
+        <TextView
+            android:id="@+id/time_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="50dp"
+            android:paddingTop="40dp"
+            android:textSize="20dp"/>
+
+        <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <EditText
+                android:id="@+id/edit_content_change"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top"
+                android:textSize="20dp"
+                android:background="@null" />
+            <Button
+                android:id="@+id/clock_change"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/clock"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="215dp"
+                android:visibility="gone"
+                />
+            <Button
+                android:id="@+id/done_change"
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:background="@drawable/done"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="215dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+</LinearLayout>

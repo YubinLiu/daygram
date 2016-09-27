@@ -9,8 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -82,7 +84,7 @@ public class BothAdapter extends BaseAdapter {
                     convertView.setTag(R.id.tag_A, holder1);
                     break;
                 case TYPE_B:
-                    convertView = LayoutInflater.from(mContext).inflate(R.layout.item_for_dot_list, parent, false);;
+                    convertView = LayoutInflater.from(mContext).inflate(R.layout.item_for_dot_list, parent, false);
                     break;
             }
         }else{
